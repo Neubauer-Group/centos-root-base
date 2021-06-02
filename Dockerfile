@@ -19,6 +19,7 @@ RUN yum update -y && \
     python -m pip --no-cache-dir install --requirement /tmp/requirements.txt && \
     python -m pip list
 # c.f. https://root.cern/install/build_from_source/#all-build-options
+# gcc v4.8.5 is too old to use CXX17, so use CXX14
 RUN mkdir /code && \
     cd /code && \
     git clone --depth 1 "${GIT_PROJECT_URL}" \
@@ -29,7 +30,7 @@ RUN mkdir /code && \
         -Dall=OFF \
         -Dsoversion=ON \
         -Dgsl_shared=ON \
-        -DCMAKE_CXX_STANDARD=17 \
+        -DCMAKE_CXX_STANDARD=14 \
         -Droot7=ON \
         -Dfortran=ON \
         -Droofit=ON \
