@@ -91,11 +91,24 @@ jobs:
       - name: List built images
         run: docker images
 
-      - name: Check ROOT version
+      - name: Check software versions
         run: >-
           docker run --rm
           neubauergroup/centos-root-base:sha-${GITHUB_SHA::8}
-          'root --version'
+          'root --version && echo "" && \
+           python --version && echo "" && \
+           g++ --version && echo "" && \
+           cmake --version && echo "" && \
+           make --version'
+
+      - name: Check PyROOT
+        run: >-
+          docker run --rm
+          --user root
+          -v $PWD:$PWD
+          -w $PWD
+          neubauergroup/centos-root-base:sha-${GITHUB_SHA::8}
+          'python tests/rf308_normintegration2d.py'
 
       - name: Build and publish to registry
         # every PR will trigger a push event on main, so check the push event is actually coming from main
