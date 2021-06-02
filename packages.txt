@@ -7,3 +7,4 @@ libXext-devel
 openssl-devel
 gcc-gfortran
 readline-devel
+cmake3
