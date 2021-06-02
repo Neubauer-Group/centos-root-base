@@ -1,0 +1,9 @@
+git
+binutils
+libX11-devel
+libXpm-devel
+libXft-devel
+libXext-devel
+openssl-devel
+gcc-gfortran
+readline-devel
