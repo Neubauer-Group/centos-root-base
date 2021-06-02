@@ -40,7 +40,7 @@ RUN mkdir /code && \
         -Dbuiltin_xrootd=ON \
         -Dxrootd=ON \
         -Dpyroot=ON \
-        -DPYTHON_EXECUTABLE=$(which python3) \
+        -DPYTHON_EXECUTABLE=$(command -v python3) \
         -DCMAKE_INSTALL_PREFIX=/usr/local/root-cern \
         -S root_src \
         -B build && \
