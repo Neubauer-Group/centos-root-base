@@ -1,4 +1,6 @@
 git
+gcc
+gcc-c++
 binutils
 libX11-devel
 libXpm-devel
@@ -8,3 +10,19 @@ openssl-devel
 gcc-gfortran
 readline-devel
 cmake3
+# optional
+epel-release
+redhat-lsb-core
+gcc-gfortran
+pcre-devel
+mesa-libGL-devel
+mesa-libGLU-devel
+glew-devel
+ftgl-devel
+fftw-devel
+cfitsio-devel
+libuuid-devel
+avahi-compat-libdns_sd-devel
+openldap-devel
+libxml2-devel
+gsl-devel
