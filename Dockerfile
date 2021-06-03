@@ -18,6 +18,7 @@ RUN yum update -y && \
     yum install -y $(cat /tmp/packages.txt) && \
     yum clean all && \
     yum autoremove -y && \
+    ln --symbolic $(command -v cmake3) /usr/bin/cmake && \
     python -m pip --no-cache-dir install --upgrade pip setuptools wheel && \
     python -m pip --no-cache-dir install --requirement /tmp/requirements.txt && \
     python -m pip list && \
