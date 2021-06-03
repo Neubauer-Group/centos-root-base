@@ -14,7 +14,7 @@ ARG GIT_PROJECT_URL=https://github.com/atlascollaboration/root
 COPY packages.txt /tmp/packages.txt
 COPY requirements.txt /tmp/requirements.txt
 RUN yum update -y && \
-    yum install -y epel-release && \
+    yum install -y epel-release redhat-lsb-core && \
     yum install -y $(cat /tmp/packages.txt) && \
     yum clean all && \
     yum autoremove -y && \

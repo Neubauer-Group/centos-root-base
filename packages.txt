@@ -12,7 +12,6 @@ gcc-gfortran
 readline-devel
 cmake3
 # optional
-redhat-lsb-core
 gcc-gfortran
 pcre-devel
 mesa-libGL-devel
