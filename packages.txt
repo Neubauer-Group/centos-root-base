@@ -1,6 +1,7 @@
 git
 gcc
 gcc-c++
+make
 binutils
 libX11-devel
 libXpm-devel
